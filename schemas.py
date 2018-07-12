@@ -1,11 +1,16 @@
 # schemas.py
 from wsgi import ma
+from marshmallow import fields
 from models import Tweet
 
 class TweetSchema(ma.Schema):
     class Meta:
         model = Tweet
-        fields = ('id', 'text', 'created_at', 'updated_at') # These are the fields we want in the JSON!
+
+    id = fields.Int()
+    text = fields.Str()
+    created_at = fields.Date()
+    updated_at = fields.Date()
 
 tweet_schema = TweetSchema()
 tweets_schema = TweetSchema(many=True)
