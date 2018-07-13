@@ -12,6 +12,8 @@ flask-migrate = "*"
 flask-script = "*"
 flask-marshmallow = "*"
 marshmallow-sqlalchemy = "*"
+flask-oauthlib = "*"
+passlib = "*"
 
 [dev-packages]
 python-dotenv = "*"
